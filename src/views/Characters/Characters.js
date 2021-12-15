@@ -7,14 +7,18 @@ export default function Characters() {
   const [characters, setCharacters] = useState([]);
   const [race, setRace] = useState('All');
   const [query, setQuery] = useState('');
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetchCharacters(race, query);
       setCharacters(data);
+      setLoading(false);
     };
-    fetchData();
-  }, [race, query]);
+    if (loading) {
+      fetchData();
+    }
+  }, [loading, race, query]);
 
   return (
     <div>
@@ -33,6 +37,7 @@ export default function Characters() {
         <option value="Maiar">Maiar</option>
         <option value="Orc">Orc</option>
       </select>
+      <button onClick={() => setLoading(true)}>Submit</button>
       {characters.map((character) => {
         return <CharactersList key={character.id} {...character} />;
       })}
