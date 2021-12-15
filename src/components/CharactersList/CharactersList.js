@@ -1,4 +1,4 @@
-import React from 'react';
+import './CharactersList.css';
 
 export default function CharactersList({ name }) {
   return (

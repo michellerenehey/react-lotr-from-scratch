@@ -1,4 +1,4 @@
-import React from 'react';
+import './BooksList.css';
 
 export default function BooksList({ title }) {
   return <div>title: {title}</div>;

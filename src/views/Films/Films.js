@@ -1,3 +1,5 @@
+import './Films.css';
+
 import { useState, useEffect } from 'react';
 import { fetchFilms } from '../../services/films';
 

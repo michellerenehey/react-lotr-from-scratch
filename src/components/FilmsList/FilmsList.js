@@ -1,4 +1,4 @@
-import React from 'react';
+import './FilmsList.css';
 
 export default function FilmsList({ title, academy_award_nominations, box_office_total }) {
   return (

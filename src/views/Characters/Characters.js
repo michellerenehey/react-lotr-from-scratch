@@ -1,3 +1,5 @@
+import './Characters.css';
+
 import { useState, useEffect } from 'react';
 import { fetchCharacters } from '../../services/characters';
 
@@ -9,6 +11,7 @@ export default function Characters() {
   const [query, setQuery] = useState('');
   const [loading, setLoading] = useState(true);
 
+  // grab just race data, connect it to drop-down
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetchCharacters(race);
@@ -17,6 +20,7 @@ export default function Characters() {
     fetchData();
   }, [race]);
 
+  // grab query data, connect it to input value
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetchCharacters(race, query);
