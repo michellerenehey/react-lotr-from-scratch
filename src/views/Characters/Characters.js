@@ -6,21 +6,24 @@ import CharactersList from '../../components/CharactersList/CharactersList';
 export default function Characters() {
   const [characters, setCharacters] = useState([]);
   const [race, setRace] = useState('All');
-  // const [query, setQuery] = useState('');
+  const [query, setQuery] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await fetchCharacters(race);
+      const data = await fetchCharacters(race, query);
       setCharacters(data);
     };
     fetchData();
-  }, [race]);
-
-  // adding setQuery to empty string for netlify to pass (functionality not yet built)
-  // setQuery('');
+  }, [race, query]);
 
   return (
     <div>
+      <input
+        type="text"
+        placeholder="search character here"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+      />
       <select value={race} onChange={(e) => setRace(e.target.value)}>
         <option value="All">All</option>
         <option value="Dwarf">Dwarf</option>
