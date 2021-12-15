@@ -12,4 +12,6 @@
 .controls {
   margin: 10px;
   padding: 5px;
+  font-family: 'Bilbo', cursive;
+  font-size: 1.5rem;
 }
