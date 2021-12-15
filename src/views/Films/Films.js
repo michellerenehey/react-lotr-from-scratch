@@ -13,7 +13,6 @@ export default function Films() {
     };
     fetchData();
   }, []);
-  console.log(films);
 
   return (
     <div>
