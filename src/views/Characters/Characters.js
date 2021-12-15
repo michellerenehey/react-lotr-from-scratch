@@ -12,7 +12,6 @@ export default function Characters() {
     const fetchData = async () => {
       const data = await fetchCharacters(race, query);
       setCharacters(data);
-      console.log(data);
     };
     fetchData();
   }, [race, query]);
