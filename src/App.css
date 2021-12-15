@@ -1,16 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Bilbo&display=swap');
 
-.App {
+* {
+  box-sizing: border-box;
   --color1: #c8c8c8;
   --color2: #325242;
   --color3: #bbb891;
   --color4: #dc965a;
   --color5: #742820;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color4);
+}
+
+.App {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: 'Bilbo', cursive;
-  background-color: var(--color4);
 }
 
 header {

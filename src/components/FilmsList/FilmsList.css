@@ -1,0 +1,21 @@
+.filmCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color5);
+  margin: 10px;
+  color: var(--color1);
+  border-radius: 5px;
+}
+
+img {
+  height: 300px;
+}
+
+.title {
+  margin: 3px;
+}
+
+.awards {
+  margin: 3px;
+}
