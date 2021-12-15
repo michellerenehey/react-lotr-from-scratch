@@ -11,6 +11,14 @@ export default function Characters() {
 
   useEffect(() => {
     const fetchData = async () => {
+      const data = await fetchCharacters(race);
+      setCharacters(data);
+    };
+    fetchData();
+  }, [race]);
+
+  useEffect(() => {
+    const fetchData = async () => {
       const data = await fetchCharacters(race, query);
       setCharacters(data);
       setLoading(false);
@@ -22,12 +30,6 @@ export default function Characters() {
 
   return (
     <div>
-      <input
-        type="text"
-        placeholder="search character here"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-      />
       <select value={race} onChange={(e) => setRace(e.target.value)}>
         <option value="All">All</option>
         <option value="Dwarf">Dwarf</option>
@@ -37,6 +39,12 @@ export default function Characters() {
         <option value="Maiar">Maiar</option>
         <option value="Orc">Orc</option>
       </select>
+      <input
+        type="text"
+        placeholder="search character here"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+      />
       <button onClick={() => setLoading(true)}>Submit</button>
       {characters.map((character) => {
         return <CharactersList key={character.id} {...character} />;
