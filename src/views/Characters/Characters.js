@@ -33,26 +33,33 @@ export default function Characters() {
   }, [loading, race, query]);
 
   return (
-    <div>
-      <select value={race} onChange={(e) => setRace(e.target.value)}>
-        <option value="All">All</option>
-        <option value="Dwarf">Dwarf</option>
-        <option value="Elf">Elf</option>
-        <option value="Hobbit">Hobbit</option>
-        <option value="Human">Human</option>
-        <option value="Maiar">Maiar</option>
-        <option value="Orc">Orc</option>
-      </select>
-      <input
-        type="text"
-        placeholder="search character here"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-      />
-      <button onClick={() => setLoading(true)}>Submit</button>
-      {characters.map((character) => {
-        return <CharactersList key={character.id} {...character} />;
-      })}
+    <div className="charactersPage">
+      <div className="controlsPanel">
+        <select className="controls" value={race} onChange={(e) => setRace(e.target.value)}>
+          <option value="All">All</option>
+          <option value="Dwarf">Dwarf</option>
+          <option value="Elf">Elf</option>
+          <option value="Hobbit">Hobbit</option>
+          <option value="Human">Human</option>
+          <option value="Maiar">Maiar</option>
+          <option value="Orc">Orc</option>
+        </select>
+        <input
+          className="controls"
+          type="text"
+          placeholder="enter character name"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+        />
+        <button className="controls" onClick={() => setLoading(true)}>
+          Search Character
+        </button>
+      </div>
+      <div className="display">
+        {characters.map((character) => {
+          return <CharactersList key={character.id} {...character} />;
+        })}
+      </div>
     </div>
   );
 }
