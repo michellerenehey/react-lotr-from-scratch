@@ -11,10 +11,18 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <header>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/films">Films</NavLink>
-          <NavLink to="/characters">Characters</NavLink>
-          <NavLink to="/books">Books</NavLink>
+          <NavLink className="navLink" to="/">
+            Home
+          </NavLink>
+          <NavLink className="navLink" to="/films">
+            Films
+          </NavLink>
+          <NavLink className="navLink" to="/characters">
+            Characters
+          </NavLink>
+          <NavLink className="navLink" to="/books">
+            Books
+          </NavLink>
         </header>
         <Switch>
           <Route exact path="/">

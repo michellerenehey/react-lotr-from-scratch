@@ -1,0 +1,17 @@
+.charactersPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.controlsPanel {
+  margin: 10px;
+  background-color: var(--color5);
+}
+
+.controls {
+  margin: 10px;
+  padding: 5px;
+  font-family: 'Bilbo', cursive;
+  font-size: 1.5rem;
+}

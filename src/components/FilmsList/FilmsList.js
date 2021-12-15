@@ -1,11 +1,13 @@
-import React from 'react';
+import './FilmsList.css';
 
-export default function FilmsList({ title, academy_award_nominations, box_office_total }) {
+export default function FilmsList({ title, academy_award_nominations }) {
   return (
-    <div>
-      <h1>title: {title}</h1>
-      <p>nominations: {academy_award_nominations}</p>
-      <p>box office total: ${box_office_total}</p>
+    <div className="filmCard">
+      <h1 className="title">{title}</h1>
+      <p className="awards">{academy_award_nominations} academy award nominations</p>
+      <img
+        src={`${process.env.PUBLIC_URL}/FILMS/${title.toLowerCase().replace(/\s/g, '-')}.jpeg`}
+      />
     </div>
   );
 }

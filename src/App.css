@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Bilbo&display=swap');
+
+* {
+  box-sizing: border-box;
+  --color1: #c8c8c8;
+  --color2: #325242;
+  --color3: #bbb891;
+  --color4: #dc965a;
+  --color5: #742820;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color2);
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Bilbo', cursive;
+}
+
+header {
+  background-color: var(--color3);
+  width: 100%;
+  padding: 10px;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.navLink {
+  padding: 10px;
+}

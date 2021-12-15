@@ -1,9 +1,5 @@
-import React from 'react';
+import './CharactersList.css';
 
 export default function CharactersList({ name }) {
-  return (
-    <div>
-      <h1>{name}</h1>
-    </div>
-  );
+  return <h1 className="characterName">{name}</h1>;
 }
