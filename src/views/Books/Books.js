@@ -13,7 +13,6 @@ export default function Books() {
     };
     fetchData();
   }, []);
-  console.log(books);
 
   return (
     <div>
