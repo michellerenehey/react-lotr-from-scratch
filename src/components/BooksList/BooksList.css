@@ -1,0 +1,14 @@
+.bookCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color5);
+  margin: 10px;
+  color: var(--color1);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+img {
+  height: 300px;
+}
