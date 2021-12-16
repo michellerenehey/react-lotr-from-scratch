@@ -32,6 +32,12 @@ export default function Characters() {
     }
   }, [loading, race, query]);
 
+  // const handleClick = async () => {
+  //   const data = await fetchCharacters(race, query);
+  //   setCharacters(data);
+  //   setQuery('');
+  // };
+
   return (
     <div className="charactersPage">
       <div className="controlsPanel">
